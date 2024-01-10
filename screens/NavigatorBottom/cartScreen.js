@@ -321,10 +321,10 @@ const renderItem = ({item, index})=>{
                         <View style= {{ flexDirection: 'row'}}>
                             {item[0].promotional > 0 ? 
                             <>
-                            <Text style={{ color: 'grey', fontSize: 13, textDecorationLine: "line-through"  }}>{FormatNumber(item[0].price)} đ</Text>
-                            <Text style={{ color: 'red', fontSize: 13, marginLeft: 10  }}>{FormatNumber(item[0].promotional)} đ</Text>
+                            <Text style={{ color: 'grey', fontSize: 13, textDecorationLine: "line-through"  }}>{FormatNumber(item[0].price)} $</Text>
+                            <Text style={{ color: 'red', fontSize: 13, marginLeft: 10  }}>{FormatNumber(item[0].promotional)} $</Text>
                             </>:
-                            <Text style={{ color: 'red', fontSize: 15,  }}>{FormatNumber(item[0].price)} đ</Text>
+                            <Text style={{ color: 'red', fontSize: 15,  }}>{FormatNumber(item[0].price)} $</Text>
                             }
                         </View>
                         <View style= {{ flexDirection: 'row', marginRight: 10}}>
@@ -409,12 +409,12 @@ const renderItem = ({item, index})=>{
                     <View style={{ flexDirection: 'column',flex:1 , paddingVertical: 5}}>
                         <View style={{ flexDirection: 'row',justifyContent: 'flex-end' }}>
                             <Text style={{color: 'green', fontSize : 12}}>Total : </Text>
-                            <Text style={{color: 'red'}}> {FormatNumber(CartTotal(Dataproduct))} đ </Text>
+                            <Text style={{color: 'red'}}> {FormatNumber(CartTotal(Dataproduct))} $ </Text>
                         </View>
                         <View style={{ flexDirection: 'row',justifyContent: 'flex-end' }}>
                             <Text style={{ marginLeft : 10 , fontSize: 10}}>Transport fee : </Text>
-                            {CartTotal(Dataproduct) > 0 ? <Text style={{color: 'red'}}> {FormatNumber(30000)} đ </Text> : 
-                            <Text style={{color: 'red'}}> 0 đ </Text> }
+                            {CartTotal(Dataproduct) > 0 ? <Text style={{color: 'red'}}> {FormatNumber(30000)} $ </Text> : 
+                            <Text style={{color: 'red'}}> 0 $ </Text> }
                             
                             
                         </View>

@@ -1,12 +1,8 @@
 import React from 'react';
 import {Modal,View,Text,StyleSheet,TouchableOpacity,ToastAndroid} from 'react-native'
 import {handleChoosePhotoCamera,handleChoosePhotoLibrary} from '../../util/adapterPickImage';
-// import {API_URL} from "@env";
-// const API_URL = "";
-const API_URL = 'http://192.85.4.132:3005'
-// const API_URL = 'http://192.168.1.12:3005'
 
-
+import API_URL from '../../api_url';
 
 
 

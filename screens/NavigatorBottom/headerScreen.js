@@ -29,7 +29,7 @@ function HeaderScreen(props){
                 <Text style={bgWhite?{...style.label,color:'tomato'}:{...style.label}}>FashionHQ</Text>
                 <View style={{ flexDirection:'row' }}>
                     {/* <AntDesign name="shoppingcart" color={bgWhite?"black":"white"} size={24} style={{marginRight:10}}/> */}
-                    <TouchableOpacity onPress={handleCart}>
+                    <TouchableOpacity onPress={() =>  props.navigation.navigate("Cart")}>
                         <AntDesign name="shoppingcart" color={bgWhite?"black":"white"} size={24} style={{marginRight:10}}/>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={handleAccount}>

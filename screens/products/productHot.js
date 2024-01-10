@@ -52,7 +52,7 @@ function ProductHot(props){
                     resizeMode='contain'
                     style={{ width : windowW*0.27, height : windowH*0.17}}/>
                     <View style={{ flex : 1, justifyContent:"space-around", margin : 3 ,flexDirection:"row",}}>
-                        <Text style={{fontSize : 10,color : "#777777", textDecorationLine:"line-through", marginRight:5 }}>{FormatNumber(item.price)}đ</Text>
+                        <Text style={{fontSize : 10,color : "#777777", textDecorationLine:"line-through", marginRight:5 }}>{FormatNumber(item.price)} $</Text>
                         <Text style={{ fontSize :10,color : "red"}}>{FormatNumber(item.promotional)}đ</Text>
                     </View>
                 </View>

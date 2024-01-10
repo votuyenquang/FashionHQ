@@ -146,7 +146,7 @@ export default function DetailsBill ({navigation,route}){
                     <Text style={{ fontWeight:'bold' }}>{truncate(item.name_product)}</Text>
                     <Text>{`Size/color : ${item.size}`}</Text>
                     <Text>{`Quantity : ${item.quanity}`}</Text>
-                    <Text>{`Provisional : ${FormatNumber(item.price*item.quanity)} đ`}</Text>
+                    <Text>{`Provisional : ${FormatNumber(item.price*item.quanity)} $`}</Text>
                 </View>
             </View>
         )
@@ -337,12 +337,12 @@ export default function DetailsBill ({navigation,route}){
                             <View >
                                 <Text>{moment(dataBill.create_at).format('YYYY-MM-DD HH:mm:ss')}</Text>
                                 <Text>{moment(dataBill.update_at).format('YYYY-MM-DD HH:mm:ss')}</Text>
-                                <Text style={{ fontWeight:'bold' }}>{FormatNumber(totalPriceProduct)+"  đ"}</Text>
-                                <Text>{FormatNumber(30000)+"  đ"}</Text>
+                                <Text style={{ fontWeight:'bold' }}>{FormatNumber(totalPriceProduct)+"  $"}</Text>
+                                <Text>{FormatNumber(5)+"  $"}</Text>
                                 {dataSale!==undefined &&
                                 <Text>{`- ${FormatNumber(dataSale.cost_sale)} đ`}</Text>
                                 }   
-                                <Text style={{ marginTop:5,fontWeight:'bold',fontSize:16 }}>{`${FormatNumber(dataBill.total_price)} đ`}</Text>
+                                <Text style={{ marginTop:5,fontWeight:'bold',fontSize:16 }}>{`${FormatNumber(dataBill.total_price)} $`}</Text>
                             </View>
                         </View>
                         {dataBill.status===0 &&

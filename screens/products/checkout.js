@@ -79,12 +79,12 @@ export default function CheckOut (props,{navigation}){
 
 const GetCodeSale = async()=>{
     if(codeSale===""){
-        Alert.alert('FashionHQ',"Bạn chưa nhập mã ưu đãi !")
+        Alert.alert('FashionHQ',"You have not entered the promotional code yet !")
     }else{
         const res = await GetAPI.postDataAPI("/order/getSaleByCode",{"code":codeSale.toUpperCase()})
         if(res.msg){
             if(res.msg==="Sale not exist"){
-                Alert.alert('FashionHQ',"Mã này không tồn tại!")
+                Alert.alert('FashionHQ',"This code does not exist !")
             }
         }else if(res!=undefined){
             handleDay(res[0]);
@@ -96,9 +96,9 @@ const handleDay = (data)=>{
     const timeStart = new Date(data.date_start);
     const timeExpired = new Date(data.expired);
     if(currentTime<timeStart){
-        Alert.alert('FashionHQ',"Thời gian sự kiện chưa bắt đầu !")
+        Alert.alert('FashionHQ',"Event time has not started yet !")
     }else if(currentTime>timeExpired){
-        Alert.alert('FashionHQ',"Sự kiện đã kết thúc !")
+        Alert.alert('FashionHQ',"The event has ended !")
     }else if(data.quanity-data.used===0){
         Alert.alert('FashionHQ',"Số lượng mã này đã hết !")
     }
@@ -191,7 +191,7 @@ const renderitem = (item)=>{
                         </View>
                         <View style={{flexDirection:'row', justifyContent:'flex-start' ,marginTop:5}}>
                             <Text style={{ color: 'red' }}> Total :  </Text>
-                            <Text style={{ color: 'red', marginLeft : 10, fontWeight:'bold' }}> {FormatNumber(TotalPrice(item))} đ</Text>
+                            <Text style={{ color: 'red', marginLeft : 10, fontWeight:'bold' }}> {FormatNumber(TotalPrice(item))} $</Text>
                         </View>
 
                     </View>
@@ -331,7 +331,7 @@ const renderitem = (item)=>{
                         {promotionPrice > 0 ? 
                             <View style={{ flex:1, flexDirection: 'row', justifyContent:'flex-start', marginHorizontal: 10, marginTop: 5 }}>
                                 <Text style={{ color:'green' }}>You get a promotion </Text>
-                                <Text style={{ color:'red' }}>{FormatNumber(promotionPrice) } đ</Text>
+                                <Text style={{ color:'red' }}>{FormatNumber(promotionPrice) } $</Text>
                                 <Text style={{ color:'green' }}> từ FashionHQ!!!</Text>
                             </View>:null}
 
@@ -351,14 +351,14 @@ const renderitem = (item)=>{
                             <Text style={{ color: 'red', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>Total : </Text>
                         </View>           
                         <View style={{...styles.bill, alignItems:'flex-end'}}>
-                        <Text style={{ color: 'grey', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD)} đ </Text>
-                        {promotionPrice <= 0 ? <Text style={{ color: 'grey', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>0 đ </Text>:<Text style={{ color: 'grey', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>-{FormatNumber(promotionPrice)} đ</Text> }
+                        <Text style={{ color: 'grey', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD)} $ </Text>
+                        {promotionPrice <= 0 ? <Text style={{ color: 'grey', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>0 $ </Text>:<Text style={{ color: 'grey', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>-{FormatNumber(promotionPrice)} $</Text> }
                         
-                        <Text style={{ color: 'grey', fontWeight:'bold', fontSize:13 , marginBottom: 10, borderBottomWidth: 0.5, borderColor: 'purple'}}>30,000 đ </Text>
+                        <Text style={{ color: 'grey', fontWeight:'bold', fontSize:13 , marginBottom: 10, borderBottomWidth: 0.5, borderColor: 'purple'}}>30,000 $ </Text>
 
                         {promotionPrice > 0 ? 
-                            <Text style={{ color: 'red', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD-promotionPrice+30000)} đ </Text>:
-                            <Text style={{ color: 'red', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD+30000)} đ </Text>
+                            <Text style={{ color: 'red', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD-promotionPrice+30000)} $ </Text>:
+                            <Text style={{ color: 'red', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD+30000)} $ </Text>
                         }
                         </View>
                     </View>
@@ -421,8 +421,8 @@ const renderitem = (item)=>{
                         <Text style={{ color:'#F45705', fontWeight: 'bold' }}>Total : </Text>
 
                         {promotionPrice > 0 ? 
-                            <Text style={{ color: '#F45705', fontWeight:'bold', fontSize:13 }}>{FormatNumber(TotalPRD-promotionPrice+30000)} đ </Text>:
-                            <Text style={{ color: '#F45705', fontWeight:'bold', fontSize:13 }}>{FormatNumber(TotalPRD+30000)} đ </Text>
+                            <Text style={{ color: '#F45705', fontWeight:'bold', fontSize:13 }}>{FormatNumber(TotalPRD-promotionPrice+30000)} $ </Text>:
+                            <Text style={{ color: '#F45705', fontWeight:'bold', fontSize:13 }}>{FormatNumber(TotalPRD+30000)} $ </Text>
                         }
 
                     </View>
@@ -448,7 +448,7 @@ const renderitem = (item)=>{
                             }}
                         >
                             <Text style={{ fontWeight:'bold', color:'white' }}>
-                                Đặt Hàng
+                                Order
                             </Text>
                         </LinearGradient>
                     </TouchableOpacity>

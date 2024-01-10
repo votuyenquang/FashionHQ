@@ -376,7 +376,7 @@ export default function Productdetail(props,{navigation}){
                             }}
                             >
                 <Entypo name="shop" color="red" size={20}/>
-                <Text>Giỏ hàng</Text>
+                <Text>Cart</Text>
             </TouchableOpacity>
             <View style={styles.verticleLine}></View>
             <TouchableOpacity style={{flexDirection:'column',alignItems:'center',flex:0.25 }} onPress={()=>{RemoveCart()}} >
@@ -434,12 +434,12 @@ export default function Productdetail(props,{navigation}){
                 {item.promotional > 0 ? 
                 <View style={{ flexDirection: 'row', justifyContent: 'flex-start', marginHorizontal: 30,marginTop: 7 }}>
                 <Text style={{ color: 'red',fontSize: 13, fontWeight:'bold' }}>{FormatNumber(item.promotional)} đ</Text>
-                <Text style={{color: 'grey', textDecorationLine: 'line-through', marginLeft: 15  }}>{FormatNumber(item.price)} đ</Text>
+                <Text style={{color: 'grey', textDecorationLine: 'line-through', marginLeft: 15  }}>{FormatNumber(item.price)} $</Text>
                 <Text style={{ color: 'red', fontSize: 16, marginLeft :15, backgroundColor: '#D3D3D3', borderRadius: 20}}>  -{100-(Math.round((item.promotional*100)/item.price))}%  </Text>
                 </View>:
                 <>
                 <View style={{ flexDirection: 'row', justifyContent: 'flex-start', marginHorizontal: 30,marginTop: 7 }}>
-                <Text style={{ color: 'red',fontSize: 13, fontWeight:'bold' }}>{FormatNumber(item.price)} đ</Text>
+                <Text style={{ color: 'red',fontSize: 13, fontWeight:'bold' }}>{FormatNumber(item.price)} $</Text>
                 </View>
                 </>}
                 <View style={styles.viewItemStar}>
@@ -475,12 +475,12 @@ export default function Productdetail(props,{navigation}){
                             <View style={{...styles.priceItem}}>
                             {checkPromotional == null ? 
                             <>
-                                <Text style={{ color: 'red', fontSize: 19, marginTop: 5,fontWeight:'bold'}}>{FormatNumber(DataProductDetail[0].price)} đ</Text>
+                                <Text style={{ color: 'red', fontSize: 19, marginTop: 5,fontWeight:'bold'}}>{FormatNumber(DataProductDetail[0].price)} $</Text>
                             </>: 
                             <>
-                                <Text style={{ color: 'red', fontSize: 19, marginTop: 5,fontWeight: 'bold'}}>{FormatNumber(DataProductDetail[0].promotional)} đ</Text>
+                                <Text style={{ color: 'red', fontSize: 19, marginTop: 5,fontWeight: 'bold'}}>{FormatNumber(DataProductDetail[0].promotional)} $</Text>
                                 <View style = {{ flexDirection: 'row', justifyContent: 'flex-start' }}> 
-                                    <Text style={{ color: '#888', fontSize: 16, marginTop: 5, textDecorationLine:'line-through' }}>{FormatNumber(DataProductDetail[0].price)} đ</Text>
+                                    <Text style={{ color: '#888', fontSize: 16, marginTop: 5, textDecorationLine:'line-through' }}>{FormatNumber(DataProductDetail[0].price)} $</Text>
                                     <Text style={{ color: 'red', fontSize: 16, marginTop: 5, marginLeft :15, backgroundColor: '#D3D3D3', borderRadius: 20}}>  -{100-(Math.round((DataProductDetail[0].promotional*100)/DataProductDetail[0].price))}%  </Text>
                                 </View>
                             </>}   
@@ -546,7 +546,7 @@ export default function Productdetail(props,{navigation}){
                                 </View>
                                 <View style = {{ marginLeft: 15, flexDirection: 'row', justifyContent: 'space-between', marginTop: 5 }}>
                                     <Text style = {{  fontSize : 11 }}>Standard Delivery</Text>
-                                    <Text style = {{  fontSize : 12,fontWeight: 'bold', color: 'black', }}>22.000 đ   </Text>
+                                    <Text style = {{  fontSize : 12,fontWeight: 'bold', color: 'black', }}>5 $   </Text>
                                 </View>
                         </View> 
                         <View style={{ marginTop : 5, borderBottomWidth: 1, borderBottomColor: "#D3D3D3"}}>
@@ -596,9 +596,9 @@ export default function Productdetail(props,{navigation}){
                         quantityDisplayScreen ={quantityDisplayScreen}
                         AddCart={()=>{AddCart()}}
                     />
-                    <ModalFavorite ModalVisible= {modalVisible} setModalVisible={(e)=>setModalVisible(e)} require= {require('../../assets/lottierfiles/modalFavorite.json')} text={'Đã thêm vào danh mục yêu thích'} width={120} height={120}/>
-                    <ModalFavorite ModalVisible= {modalVisibleDelete} setModalVisible={(e)=>setModalVisibleDelete(e)} require= {require('../../assets/lottierfiles/broken-heart.json')} text={'Đã xóa sản phẩm yêu thích'} width={120} height={120}/>
-                    <ModalFavorite ModalVisible= {modalVisibleAddcart} setModalVisible={(e)=>setmodalVisibleAddcart(e)} require= {require('../../assets/lottierfiles/addtocart.json')} text={'Đã thêm giỏ hàng !'} width={120} height={120}/>
+                    <ModalFavorite ModalVisible= {modalVisible} setModalVisible={(e)=>setModalVisible(e)} require= {require('../../assets/lottierfiles/modalFavorite.json')} text={'Add to favorite successfully'} width={120} height={120}/>
+                    <ModalFavorite ModalVisible= {modalVisibleDelete} setModalVisible={(e)=>setModalVisibleDelete(e)} require= {require('../../assets/lottierfiles/broken-heart.json')} text={'Deleted favorite product'} width={120} height={120}/>
+                    <ModalFavorite ModalVisible= {modalVisibleAddcart} setModalVisible={(e)=>setmodalVisibleAddcart(e)} require= {require('../../assets/lottierfiles/addtocart.json')} text={'Add to cart successfully !'} width={120} height={120}/>
                 </>:
                 <View style={{ flex:1, justifyContent: 'center', alignContent: 'center' }}>
                     <LoadingCircle/>

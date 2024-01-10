@@ -164,10 +164,10 @@ export default function FavoriteScreen (props,{navigation}){
                                         <Text>{truncate(name)}</Text>
                                     </View>
                                     <View style={{ flex : 1, justifyContent:"space-between", marginHorizontal: 3, marginTop: 3 ,flexDirection:"row",}}>
-                                            <Text style={{...styles.price ,color : "#777777", textDecorationLine:"line-through", marginRight:5 }}>{FormatNumber(item[0].price)}đ</Text>
-                                            <Text style={{ ...styles.price ,color:"red",marginRight:10}}>{FormatNumber(item[0].promotional)}đ</Text>
+                                            <Text style={{...styles.price ,color : "#777777", textDecorationLine:"line-through", marginRight:5 }}>{FormatNumber(item[0].price)}$</Text>
+                                            <Text style={{ ...styles.price ,color:"red",marginRight:10}}>{FormatNumber(item[0].promotional)}$</Text>
                                         
-                                        {/* <Text style={{ ...styles.price, color:'red' }}>{FormatNumber(item.price)}đ</Text> */}
+                                        {/* <Text style={{ ...styles.price, color:'red' }}>{FormatNumber(item.price)}$</Text> */}
                                     </View>  
                                     <View style={{ flex:1,flexDirection:"row"}}>
                                         <Star score={star} style={{width:80,height:15}}/>
@@ -191,7 +191,7 @@ export default function FavoriteScreen (props,{navigation}){
                                         <Text>{truncate(name)}</Text>
                                     </View>
                                     <View style={{ flex : 1, marginHorizontal: 3, marginTop: 3  ,flexDirection:"row",}}>
-                                        <Text style={{ ...styles.price, color:'red' }}>{FormatNumber(item[0].price)}đ</Text>
+                                        <Text style={{ ...styles.price, color:'red' }}>{FormatNumber(item[0].price)}$</Text>
                                     </View>  
                                     <View style={{flex:1, flexDirection:"row"}}>
                                         <Star score={star} style={{width:80,height:15}}/>

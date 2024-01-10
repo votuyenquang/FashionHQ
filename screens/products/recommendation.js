@@ -53,8 +53,8 @@ const renderitem= ({item,index})=>{
                         style={{ width : windowW*0.3, height : windowH*0.19, marginTop: 5, borderRadius: 10}}/>
                         <Text style={{ fontSize :10,color : "grey", marginTop: 4, marginHorizontal: 6}}>{item.name}</Text>
                         <View style={{ flex : 1, justifyContent:"space-around", margin : 3 ,flexDirection:"row",}}>
-                            <Text style={{fontSize : 10,color : "#777777", textDecorationLine:"line-through", marginRight:5 }}>{FormatNumber(item.price)}đ</Text>
-                            <Text style={{ fontSize :10,color : "red"}}>{FormatNumber(item.promotional)}đ</Text>
+                            <Text style={{fontSize : 10,color : "#777777", textDecorationLine:"line-through", marginRight:5 }}>{FormatNumber(item.price)} $</Text>
+                            <Text style={{ fontSize :10,color : "red"}}>{FormatNumber(item.promotional)} $</Text>
                         </View>
                         
                     </View>

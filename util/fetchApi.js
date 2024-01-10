@@ -1,8 +1,11 @@
 // import {API_URL} from "@env"
 // const API_URL  = 'http://192.168.1.140:3005'
 
-const API_URL = 'http://192.85.4.132:3005'
+// const API_URL = 'http://192.85.4.132:3005'
 // const API_URL = 'http://192.168.1.12:3005'
+import API_URL from '../api_url';
+
+
 
 export const getAPI = async(url)=>{
     console.log("url",API_URL+url)

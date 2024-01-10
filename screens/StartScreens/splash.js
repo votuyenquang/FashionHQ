@@ -48,8 +48,7 @@ export default function SplashScreen({navigation}){
                          </Animated.Image>
                     </View>
                     <Animated.View style={{...styles.logoContainer,alignItems:"center", marginLeft : moveAnim}}>
-                        <Text style={{ ...styles.logoText,fontSize : 25}}> FashionHQ</Text>
-                        <Animated.Text style={{...styles.logoText,color : "#295A8A", opacity : fadeAnim, paddingTop : 4}}> FASHION FOR YOU</Animated.Text>
+                        <Animated.Text style={{...styles.logoText,color : "#295A8A", opacity : fadeAnim, paddingTop : 4}}> Wellcome to FashionHQ</Animated.Text>
                     </Animated.View>
                 </LinearGradient>
             </SafeAreaView>

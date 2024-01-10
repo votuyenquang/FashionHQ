@@ -22,7 +22,7 @@ const DisplayBill =(props)=>{
                 alignContent: 'center',
                 alignItems:'center'                   
              }}>
-                <Text style={{ ...styles.table_order, width: windowW*0.15, maxWidth: windowW*0.15 }}>Code order</Text>
+                <Text style={{ ...styles.table_order, width: windowW*0.15, maxWidth: windowW*0.15 }}>Code</Text>
                 <Text style={{ ...styles.table_order, width: windowW*0.23,maxWidth: windowW*0.23  }}>Total Money</Text>
                 <Text style={{ ...styles.table_order, width: windowW*0.23,maxWidth: windowW*0.23 }}>Status</Text>
                 <Text style={{ ...styles.table_order, width: windowW*0.15, maxWidth: windowW*0.15 }}>Detail</Text>
@@ -41,7 +41,7 @@ const DisplayBill =(props)=>{
                              }}>
                                 <Text style={{...styles.TextBill,width: windowW*0.15,maxWidth: windowW*0.15,textAlign:'center',padding:5}}
                                  >#{Data.id}</Text>
-                                <Text style={{ ...styles.TextBill,width: windowW*0.23,maxWidth: windowW*0.23, textAlign:'center',padding:5 }}>{FormatNumber(Data.total_price)} đ</Text>
+                                <Text style={{ ...styles.TextBill,width: windowW*0.23,maxWidth: windowW*0.23, textAlign:'center',padding:5 }}>{FormatNumber(Data.total_price)} $</Text>
                                 <Text style={{...styles.TextBill, color: (Data.status==0) ? 'red':(Data.status)==1?'blue':(Data.status==2)?'green':'grey',
                                                      width: windowW*0.23,maxWidth: windowW*0.23, textAlign:'center',padding:5}}>
                                                 {(Data.status==0) ? 'Processing':(Data.status)==1?'Delivering':(Data.status==2)?'Completed':'Cancelled'}

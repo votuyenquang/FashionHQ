@@ -26,7 +26,7 @@ export default function HomeScreen({navigation}){
     const [DataProductFlashsale, setDataProductFlashsale] = useState([]);
     const [Datacategory, setDatacategory] = useState([]);
     const [bgHeader, setbgHeader] = useState(false);
-    const [textsearch, settextsearch] = useState('CTFASHION WELCOME !!!');
+    const [textsearch, settextsearch] = useState('FashionHQ WELCOME !!!');
     const [DataProductNew, setDataProductNew] = useState([]);//data hiển thị sản phẩm mới nhất trong box
     const [DataProductNewImageSlideBox, setDataProductNewImageSlideBox] = useState([]);//hình ảnh hiển thị lên slide
     const [DataProductNewSlideBox, setDataProductNewSlideBox] = useState([]);//data khi click vào slider

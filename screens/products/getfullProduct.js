@@ -87,8 +87,8 @@ import FastImage from 'react-native-fast-image';
                                         <Text>{truncate(name)}</Text>
                                     </View>
                                     <View style={{ flex : 1, justifyContent:"space-between", marginHorizontal: 3, marginTop: 3 ,flexDirection:"row",}}>
-                                            <Text style={{...styles.price ,color : "#777777", textDecorationLine:"line-through", marginRight:5 }}>{FormatNumber(item.price)}đ</Text>
-                                            <Text style={{ ...styles.price ,color:"red",marginRight:10}}>{FormatNumber(item.promotional)}đ</Text>
+                                            <Text style={{...styles.price ,color : "#777777", textDecorationLine:"line-through", marginRight:5 }}>{FormatNumber(item.price)} $</Text>
+                                            <Text style={{ ...styles.price ,color:"red",marginRight:10}}>{FormatNumber(item.promotional)} $</Text>
                                         
                                         {/* <Text style={{ ...styles.price, color:'red' }}>{FormatNumber(item.price)}đ</Text> */}
                                     </View>  
@@ -122,7 +122,7 @@ import FastImage from 'react-native-fast-image';
                                         <Text>{truncate(name)}</Text>
                                     </View>
                                     <View style={{ flex : 1, marginHorizontal: 3, marginTop: 3  ,flexDirection:"row",}}>
-                                        <Text style={{ ...styles.price, color:'red' }}>{FormatNumber(item.price)}đ</Text>
+                                        <Text style={{ ...styles.price, color:'red' }}>{FormatNumber(item.price)} $</Text>
                                     </View>  
                                     <View style={{flex:1, flexDirection:"row"}}>
                                         <Star score={star} style={{width:80,height:15}}/>
