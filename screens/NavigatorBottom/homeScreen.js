@@ -216,7 +216,7 @@ export default function HomeScreen({navigation}){
                     <VirtualizedView setValue={handleSetValueScrollY} >      
                         <CategoryScreen navigation={navigation} Data={Datacategory} />
                         <ProductHot Data={DataProducthot} navigation={navigation}/>
-                        <RecommendationProduct Data={DataProductFlashsale} navigation={navigation}/>
+                        {/* <RecommendationProduct Data={DataProductFlashsale} navigation={navigation}/> */}
                         <Flashsales Data={DataProductFlashsale} navigation={navigation}/>
                         <ProductNew images ={DataProductNewImageSlideBox} Data = {DataProductNewSlideBox} navigation={navigation} DataNewproduct= {DataProductNew}/>
                         <GetfullProduct DatafullProduct={Datafullproduct} navigation={navigation} />

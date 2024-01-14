@@ -122,11 +122,11 @@ const TotalPrice = (item)=>{
 const Order = async()=>{
     let DataProduct = Data;
     let idSale = null;
-    let total = TotalPRD+30000;
+    let total = TotalPRD+5;
     const {name,email,address,phone} = formRef.current.values
     if(promotionPrice > 0){
         idSale= DataSale.id;
-        total = TotalPRD-promotionPrice+30000;
+        total = TotalPRD-promotionPrice+5;
     }
     const data = {
         "name": name,
@@ -357,8 +357,8 @@ const renderitem = (item)=>{
                         <Text style={{ color: 'grey', fontWeight:'bold', fontSize:13 , marginBottom: 10, borderBottomWidth: 0.5, borderColor: 'purple'}}>30,000 $ </Text>
 
                         {promotionPrice > 0 ? 
-                            <Text style={{ color: 'red', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD-promotionPrice+30000)} $ </Text>:
-                            <Text style={{ color: 'red', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD+30000)} $ </Text>
+                            <Text style={{ color: 'red', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD-promotionPrice+5)} $ </Text>:
+                            <Text style={{ color: 'red', fontWeight:'bold', fontSize:13 , marginBottom: 10}}>{FormatNumber(TotalPRD+5)} $ </Text>
                         }
                         </View>
                     </View>
@@ -421,8 +421,8 @@ const renderitem = (item)=>{
                         <Text style={{ color:'#F45705', fontWeight: 'bold' }}>Total : </Text>
 
                         {promotionPrice > 0 ? 
-                            <Text style={{ color: '#F45705', fontWeight:'bold', fontSize:13 }}>{FormatNumber(TotalPRD-promotionPrice+30000)} $ </Text>:
-                            <Text style={{ color: '#F45705', fontWeight:'bold', fontSize:13 }}>{FormatNumber(TotalPRD+30000)} $ </Text>
+                            <Text style={{ color: '#F45705', fontWeight:'bold', fontSize:13 }}>{FormatNumber(TotalPRD-promotionPrice+5)} $ </Text>:
+                            <Text style={{ color: '#F45705', fontWeight:'bold', fontSize:13 }}>{FormatNumber(TotalPRD+5)} $ </Text>
                         }
 
                     </View>

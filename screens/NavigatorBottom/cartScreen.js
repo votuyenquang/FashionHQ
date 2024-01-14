@@ -413,7 +413,7 @@ const renderItem = ({item, index})=>{
                         </View>
                         <View style={{ flexDirection: 'row',justifyContent: 'flex-end' }}>
                             <Text style={{ marginLeft : 10 , fontSize: 10}}>Transport fee : </Text>
-                            {CartTotal(Dataproduct) > 0 ? <Text style={{color: 'red'}}> {FormatNumber(30000)} $ </Text> : 
+                            {CartTotal(Dataproduct) > 0 ? <Text style={{color: 'red'}}> {FormatNumber(5)} $ </Text> : 
                             <Text style={{color: 'red'}}> 0 $ </Text> }
                             
                             
